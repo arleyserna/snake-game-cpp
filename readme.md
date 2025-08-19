@@ -22,37 +22,39 @@ This is a classic **Snake** game implemented in **C++** for the console, develop
 - ANSI escape code support if you want colored output.
 
 ## Project Structure
-
+```
 Snake/
 ├── include/
-│ ├── Snake.hpp
+| ├── Snake.hpp
 │ ├── GameBoard.hpp
 │ ├── Meal.hpp
-│ └── Utils.h
+│ └── Utils.hpp
 ├── src/
 │ ├── Snake.cpp
 │ ├── GameBoard.cpp
 │ ├── Meal.cpp
-│ └── Utils.cpp
-├── main.cpp
+│ ├── Utils.cpp
+│ └── main.cpp
 └── README.md
+
+```
 
 Or build directly inside Code::Lite by adding all .cpp and .hpp files to your project.
 
-##How to Play
+## How to Play
 
 - Use keys U, L, D, R to move the snake (Up, Left, Down, Right).
 - The snake grows when it eats the food (*).
 - Avoid colliding with yourself.
 - Your score increases with each food eaten.
 
-##Possible Improvements
+## Possible Improvements
 
 - Refactor with a GameController to separate game logic from board and snake.
 - Cross-platform support (Linux/macOS).
 - High-score tracking.
 - Add difficulty levels and obstacles.
 
-##Author
+## Author
 
 Hoover Serna
