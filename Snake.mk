@@ -64,7 +64,7 @@ AS       := C:/mingw64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_Snake.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameBoard.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Utils.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Game.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_Board.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Snake.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Utils.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Game.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) 
 
 
 
@@ -95,15 +95,15 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/src_Board.cpp$(ObjectSuffix): src/Board.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/arley/Workspaces/Workspaces2/Snake/src/Board.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Board.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Board.cpp$(PreprocessSuffix): src/Board.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Board.cpp$(PreprocessSuffix) src/Board.cpp
+
 $(IntermediateDirectory)/src_Snake.cpp$(ObjectSuffix): src/Snake.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/arley/Workspaces/Workspaces2/Snake/src/Snake.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Snake.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_Snake.cpp$(PreprocessSuffix): src/Snake.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Snake.cpp$(PreprocessSuffix) src/Snake.cpp
-
-$(IntermediateDirectory)/src_GameBoard.cpp$(ObjectSuffix): src/GameBoard.cpp 
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/arley/Workspaces/Workspaces2/Snake/src/GameBoard.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GameBoard.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_GameBoard.cpp$(PreprocessSuffix): src/GameBoard.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GameBoard.cpp$(PreprocessSuffix) src/GameBoard.cpp
 
 $(IntermediateDirectory)/src_Utils.cpp$(ObjectSuffix): src/Utils.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/arley/Workspaces/Workspaces2/Snake/src/Utils.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Utils.cpp$(ObjectSuffix) $(IncludePath)

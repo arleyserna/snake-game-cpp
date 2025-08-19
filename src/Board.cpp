@@ -2,34 +2,37 @@
 #include <sstream>
 #include <windows.h>
 #include <string>
-#include "include/GameBoard.hpp"
+#include "include/Board.hpp"
 #include "include/Utils.hpp"
 #include "include/Snake.hpp"
 #include "include/Meal.hpp"
 
-GameBoard::GameBoard(int height, int width){
+Board::Board(int height, int width){
     
     
     this->board_height = height;
     this->board_width = width;
+    this->isActive = true;
 }
 
-GameBoard::~GameBoard(){
+Board::~Board(){
 
 }
 
 // Clears the board game
 
 
-void GameBoard::clearBoard(){
-
+void Board::clear(){
+    
+    Utils::resetCursorPosition(0,0);
+    Utils::hideCursor();
     this->buffer.str("");
 }
 
 
 // Draw Board + Snake and Meals positions
 
-void GameBoard::drawBoard(Snake& snake, Meal& meal){
+void Board::draw(Snake& snake, Meal& meal){
     
         char border_char = 219;
         char snake_char = 219;
@@ -104,7 +107,7 @@ void GameBoard::drawBoard(Snake& snake, Meal& meal){
 // Moves Snake between borders as required.
 
 
-void GameBoard::processBorders(Snake& snake){
+void Board::processBorders(Snake& snake){
 
     auto& head = snake.getHead();
     
@@ -130,7 +133,7 @@ void GameBoard::processBorders(Snake& snake){
 
 // Make the Snake grow 
 
-void GameBoard::snakeHasEaten(Snake& snake, Meal& meal){
+void Board::snakeHasEaten(Snake& snake, Meal& meal){
     
     auto pos = snake.getPositions().back();
     
@@ -139,9 +142,15 @@ void GameBoard::snakeHasEaten(Snake& snake, Meal& meal){
         meal.x = std::rand() % (this->board_width-1) +1;
         meal.y = std::rand() % (this->board_height-1) +1;
         snake.move();
-        snake.crecer(pos.x,pos.y);
+        snake.grow(pos.x,pos.y);
         snake.increaseScore();
         snake.speedUp();
         
     } 
+}
+
+
+void Board::setRefreshRate(const int &speed){
+    
+    Sleep(speed);
 }

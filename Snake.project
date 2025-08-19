@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="Snake" Version="11000" InternalType="User templates">
   <VirtualDirectory Name="include">
+    <File Name="include/Board.hpp"/>
     <File Name="include/Utils.hpp"/>
     <File Name="include/Game.hpp"/>
-    <File Name="include/GameBoard.hpp"/>
     <File Name="include/Snake.hpp"/>
     <File Name="include/Position.hpp"/>
     <File Name="include/Meal.hpp"/>
@@ -11,10 +11,10 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="src/Board.cpp"/>
     <File Name=".gitignore"/>
     <File Name="src/readme.md" ExcludeProjConfig="Debug;"/>
     <File Name="src/Game.cpp"/>
-    <File Name="src/GameBoard.cpp"/>
     <File Name="src/main.cpp"/>
     <File Name="src/Utils.cpp"/>
     <File Name="src/Snake.cpp"/>

@@ -1,24 +1,28 @@
+#include <sstream>
+
 #pragma once
 
 class Snake;
 struct Meal;
 
 
-class GameBoard{
+class Board{
 
     public:
         
-        GameBoard(int, int);
-        ~GameBoard();
+        Board(int, int);
+        ~Board();
         
-        void drawBoard(Snake& snake, Meal& meal);
+        void draw(Snake& snake, Meal& meal);
         void processBorders(Snake& snake);
         void snakeHasEaten(Snake& snake, Meal& meal);
-        void clearBoard();
+        void setRefreshRate(const int &speed);
+        void clear();
     
     private: 
         
         int board_width, board_height;
         std::ostringstream buffer;
+        bool isActive;
 };
 

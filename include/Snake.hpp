@@ -12,22 +12,25 @@ class Snake{
         ~Snake();
         
         std::vector<Position>& getPositions();
-        void feed(Meal meal);
-        bool getHasEaten();
-        void setHasEaten(bool val);
-        char getSnakeDirection();
         Position& getHead();
-        void crecer(int,int);
+        
+        bool getHasEaten();
+        bool hasCrashed();
+        void setHasEaten(bool val);
+        void grow(int x,int y);
         void move();
         void moveForward();
         void updateDirection();
-        int  getScore();
-        float   getSpeedMach();
-        int   getSpeed();
-        bool hasCrashed();
         void increaseScore();
         void speedUp();
         void gameStatus();
+        void getResults();
+        char getSnakeDirection();
+        
+        float getSpeedMach();
+    
+        int getScore();
+        int getSpeed();
 
     private:
         

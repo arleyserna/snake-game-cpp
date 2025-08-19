@@ -35,13 +35,13 @@ Position& Snake::getHead(){
         
     return this->segments.at(0);
 }
-
+/*
 void Snake::feed(Meal M){
     
     this->segments.push_back(Position({M.x, M.y}));
-}
+}*/
 
-void Snake::crecer(int x,int y){
+void Snake::grow(int x,int y){
 
     this->segments.push_back(Position({x,y}));
 }
@@ -171,12 +171,8 @@ bool Snake::hasCrashed(){
     
 }
 
-void Snake::gameStatus(){
+void Snake::getResults(){
 
-    if(this->hasCrashed()){
-     
-        std::cout<<"GAME OVER!! :( | *** Your Final Score: ["<<this->getScore()<<"] ***\n";
-        //break;
-    }
-        
+    std::string mach_speed = std::to_string(Snake::getSpeedMach());
+    std::cout<<"\nScore > : "<<Snake::getScore()<<" Speed: "<<mach_speed.substr(0,4)<<"x Size: "<<Snake::getPositions().size()<<std::endl;    
 }
