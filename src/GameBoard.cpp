@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <string>
 #include "include/GameBoard.hpp"
-#include "include/Utils.h"
+#include "include/Utils.hpp"
 #include "include/Snake.hpp"
 #include "include/Meal.hpp"
 
@@ -31,7 +31,7 @@ void GameBoard::clearBoard(){
 
 void GameBoard::drawBoard(Snake& snake, Meal& meal){
     
-        char border_char = 229;
+        char border_char = 219;
         char snake_char = 219;
         char meal_char = '*';
         

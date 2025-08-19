@@ -22,6 +22,10 @@ This is a classic **Snake** game implemented in **C++** for the console, develop
 - ANSI escape code support if you want colored output.
 
 ## Project Structure
+<<<<<<< HEAD
+=======
+
+>>>>>>> a648cc4 (Updated some Utils.h header file reference to Utils.hpp)
 ```
 Snake/
 ├── include/
@@ -40,6 +44,8 @@ Snake/
 ```
 
 Or build directly inside Code::Lite by adding all .cpp and .hpp files to your project.
+
+`pictures/snake.png`
 
 ## How to Play
 

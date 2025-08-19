@@ -5,7 +5,7 @@
 #include "include/GameBoard.hpp"
 #include "include/Snake.hpp"
 #include "include/Meal.hpp"
-#include "include/Utils.h"
+#include "include/Utils.hpp"
 
 #define HEIGHT 20
 #define WIDTH  80

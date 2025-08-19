@@ -1,7 +1,7 @@
 #include "include/Snake.hpp"
 #include "include/Meal.hpp"
 #include "include/Position.hpp"
-#include "include/Utils.h"
+#include "include/Utils.hpp"
 #include <iostream>
 #include <algorithm>
 #include <vector>
