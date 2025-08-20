@@ -35,11 +35,6 @@ Position& Snake::getHead(){
         
     return this->segments.at(0);
 }
-/*
-void Snake::feed(Meal M){
-    
-    this->segments.push_back(Position({M.x, M.y}));
-}*/
 
 void Snake::grow(int x,int y){
 

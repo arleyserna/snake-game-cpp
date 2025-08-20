@@ -1,6 +1,6 @@
 # Snake Game in C++
 
-This is a classic **Snake** game implemented in **C++** for the console, developed using **Code::Lite IDE**. The game uses **object-oriented programming**, vectors, references, and Windows console control.
+This is a classic **Snake** game implemented in **C++** for the console, developed using **Code::Lite IDE**. The game was done using **object-oriented programming**, vectors, references, and Windows console control.
 
 ## Features
 
@@ -12,8 +12,10 @@ This is a classic **Snake** game implemented in **C++** for the console, develop
 - Console rendering using ASCII characters and ANSI colors.
 - Modular code with separation of responsibilities:
   - `Snake` → handles the snake.
-  - `GameBoard` → handles board rendering.
+  - `Board` → handles board rendering.
+  - `Game`  → hangles the game flow.
   - `Utils` → utility functions like key input and colored output.
+  
 
 ## Requirements
 
@@ -26,12 +28,14 @@ This is a classic **Snake** game implemented in **C++** for the console, develop
 Snake/
 ├── include/
 | ├── Snake.hpp
-│ ├── GameBoard.hpp
+│ ├── Board.hpp
+│ ├── Game.hpp
 │ ├── Meal.hpp
 │ └── Utils.hpp
 ├── src/
 │ ├── Snake.cpp
-│ ├── GameBoard.cpp
+│ ├── Board.cpp
+│ ├── Game.cpp
 │ ├── Meal.cpp
 │ ├── Utils.cpp
 │ └── main.cpp
@@ -52,7 +56,6 @@ Or build directly inside Code::Lite by adding all .cpp and .hpp files to your pr
 
 ## Possible Improvements
 
-- Refactor with a GameController to separate game logic from board and snake.
 - Cross-platform support (Linux/macOS).
 - High-score tracking.
 - Add difficulty levels and obstacles.
